@@ -10,13 +10,13 @@ output: [1,'a','cat',2,3,'dog',4,5]
 
 a=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 b=[]
-def flatten(x):
+def f(x):
     for i in x:
         if isinstance (i,list):
-            flatten(i)
+            f(i)
         else:
             b.append(i)
-flatten(a)
+f(a)
 print(b)
 
 
